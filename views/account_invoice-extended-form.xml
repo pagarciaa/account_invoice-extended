@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
+    <!--
     <record id="account_invoice_form_view-ext" model="ir.ui.view">
       <field name="name">account.invoice.form</field>
       <field name="model">account.invoice</field>
       <field name="inherit_id" ref="account.invoice_form"/>
       <field name="arch" type="xml">
-          <xpath expr="//field[@name='user_id']" position="after">
+          <xpath expr="//field[@name='currency_id']" position="after">
               <field name="description" string="Concepto"/>
           </xpath>
       </field>
     </record>
+    !-->
+
+    <record id="account_invoice_supplier-form-ext" model="ir.ui.view">
+      <field name="name">account.invoice.supplier-form-extended</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_supplier_form"/>
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='currency_id']" position="after">
+              <field name="description" string="Concepto"/>
+          </xpath>
+      </field>
+    </record>
+
   </data>
 </odoo>
